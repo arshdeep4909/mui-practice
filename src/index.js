@@ -10,29 +10,32 @@ import Functions from "./pages/functions/Functions";
 import Hosting from "./pages/hosting/Hosting";
 import MachineLearning from "./pages/machineLearning/MachineLearning";
 import Storage from "./pages/storage/Storage";
+import { ThemeProvider } from "@mui/private-theming";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<App />} />
-      <Route path="authentication" element={<Authentication />} />
-      <Route path="Database" element={<Database />} />
-      <Route path="Functions" element={<Functions />} />
-      <Route path="Hosting" element={<Hosting />} />
-      <Route path="machine-learning" element={<MachineLearning />} />
-      <Route path="Storage" element={<Storage />} />
+  <ThemeProvider>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="authentication" element={<Authentication />} />
+        <Route path="Database" element={<Database />} />
+        <Route path="Functions" element={<Functions />} />
+        <Route path="Hosting" element={<Hosting />} />
+        <Route path="machine-learning" element={<MachineLearning />} />
+        <Route path="Storage" element={<Storage />} />
 
-      <Route
-        path="*"
-        element={
-          <main style={{ padding: "1rem" }}>
-            <p>There's nothing here!</p>
-          </main>
-        }
-      />
-    </Routes>
-  </BrowserRouter>
+        <Route
+          path="*"
+          element={
+            <main style={{ padding: "1rem" }}>
+              <p>There's nothing here!</p>
+            </main>
+          }
+        />
+      </Routes>
+    </BrowserRouter>
+  </ThemeProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function
