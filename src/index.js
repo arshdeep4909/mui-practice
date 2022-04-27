@@ -10,11 +10,12 @@ import Functions from "./pages/functions/Functions";
 import Hosting from "./pages/hosting/Hosting";
 import MachineLearning from "./pages/machineLearning/MachineLearning";
 import Storage from "./pages/storage/Storage";
+import { dashboardTheme } from "../src/dasboardTheme.js";
 import { ThemeProvider } from "@mui/private-theming";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <ThemeProvider>
+  <ThemeProvider theme={dashboardTheme}>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
